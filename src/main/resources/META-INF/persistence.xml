@@ -2,7 +2,7 @@
 
 <persistence version="1.0"
              xmlns="http://java.sun.com/xml/ns/persistence">
-    <persistence-unit name="job_finder">
+    <persistence-unit name="fat_boy_gym">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <class>model.User</class>
@@ -27,10 +27,10 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/fat_boy_gym"/>
 
             <!-- Definição do usuário do banco de dados -->
-            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.user" value="fatboygym"/>
 
             <!-- Definição da senha do usuário -->
-            <property name="javax.persistence.jdbc.password" value="postgres"/>
+            <property name="javax.persistence.jdbc.password" value="jeanclaudevandamme"/>
         </properties>
     </persistence-unit>
 </persistence>

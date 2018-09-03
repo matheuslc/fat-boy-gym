@@ -1,11 +1,16 @@
 package controller;
 
+import dao.UserDAO;
 import model.User;
 
 public class ExampleController {
-    private User user;
+    private UserDAO userDAO;
 
-    public ExampleController(User user) {
-        this.user = user;
+    public ExampleController(UserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
+
+    public void createUser(User user) {
+        this.userDAO.save(user);
     }
 }

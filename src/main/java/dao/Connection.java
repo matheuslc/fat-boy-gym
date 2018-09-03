@@ -13,6 +13,7 @@ public class Connection {
             factory = Persistence.createEntityManagerFactory("fat_boy_gym");
             em = factory.createEntityManager();
         }
+
         return em;
     }
 

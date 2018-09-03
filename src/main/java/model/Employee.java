@@ -4,22 +4,48 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="users")
-public class User {
+@Table(name="employees")
+public class Employee {
     @Id
     @GeneratedValue
     private Long id;
 
+    @Column
     private String name;
 
+    @Column
     private Long rg;
 
     @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
 
+    @Column
     private Long phone_number;
 
+    @Column
     private String address;
+
+    @Column
+    private String password;
+
+    @Column
+    private String userName;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public void setAddress(String address) {
         this.address = address;
