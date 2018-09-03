@@ -10,15 +10,34 @@ public class User {
     @GeneratedValue
     private Long id;
 
+    @Column
     private String name;
 
-    private Long rg;
+    @Column
+    private String rg;
+
+    @Column
+    private String cpf;
 
     @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
 
+    @Column
     private Long phone_number;
 
+    public void setRg(String rg) {
+        this.rg = rg;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    @Column
     private String address;
 
     public void setAddress(String address) {
@@ -35,14 +54,6 @@ public class User {
 
     public String getName() {
         return name;
-    }
-
-    public Long getRg() {
-        return rg;
-    }
-
-    public void setRg(Long rg) {
-        this.rg = rg;
     }
 
     public Date getDateOfBirth() {

@@ -14,7 +14,10 @@ public class Employee {
     private String name;
 
     @Column
-    private Long rg;
+    private String rg;
+
+    @Column
+    private String cpf;
 
     @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
@@ -30,6 +33,14 @@ public class Employee {
 
     @Column
     private String userName;
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 
     public String getPassword() {
         return password;
@@ -63,14 +74,6 @@ public class Employee {
         return name;
     }
 
-    public Long getRg() {
-        return rg;
-    }
-
-    public void setRg(Long rg) {
-        this.rg = rg;
-    }
-
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
@@ -85,6 +88,14 @@ public class Employee {
 
     public String getAddress() {
         return address;
+    }
+
+    public String getRg() {
+        return rg;
+    }
+
+    public void setRg(String rg) {
+        this.rg = rg;
     }
 
     public void setName(String name) {
