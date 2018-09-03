@@ -1,12 +1,10 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name="users")
 public class UserModel {
     @Id
     private Long id;
