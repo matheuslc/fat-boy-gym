@@ -5,7 +5,7 @@
     <persistence-unit name="job_finder">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>model.UserModel</class>
+        <class>model.User</class>
 
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
@@ -27,10 +27,10 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/fat_boy_gym"/>
 
             <!-- Definição do usuário do banco de dados -->
-            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
 
             <!-- Definição da senha do usuário -->
-            <property name="javax.persistence.jdbc.password" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="postgres"/>
         </properties>
     </persistence-unit>
 </persistence>

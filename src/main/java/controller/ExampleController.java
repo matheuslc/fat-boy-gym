@@ -1,9 +1,11 @@
 package controller;
 
-import model.UserModel;
+import model.User;
 
 public class ExampleController {
-    UserModel user = new UserModel();
+    private User user;
 
-
+    public ExampleController(User user) {
+        this.user = user;
+    }
 }
