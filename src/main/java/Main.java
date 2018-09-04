@@ -1,4 +1,4 @@
-import controller.ExampleController;
+import controller.UserController;
 import dao.Connection;
 import dao.UserDAO;
 import model.User;
@@ -11,13 +11,9 @@ public class Main {
         EntityManager entityManager = Connection.entityManager();
         UserDAO userDAO = new UserDAO(entityManager);
 
-        ExampleController controller = new ExampleController(userDAO);
+        UserController controller = new UserController(userDAO);
 
-        User user = new User();
-
-        user.setName("Carmel");
-
-        controller.createUser(user);
+        controller.init();
 
         System.out.printf("Fala tu");
     }
