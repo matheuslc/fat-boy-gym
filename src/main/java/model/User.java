@@ -25,6 +25,9 @@ public class User {
     @Column
     private Long phone_number;
 
+    @Column
+    private String address;
+
     public void setRg(String rg) {
         this.rg = rg;
     }
@@ -36,9 +39,6 @@ public class User {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
-    @Column
-    private String address;
 
     public void setAddress(String address) {
         this.address = address;

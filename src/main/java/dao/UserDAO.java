@@ -4,7 +4,7 @@ import model.User;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-public class UserDAO {
+public class UserDAO implements DAOInterface<User> {
     private EntityManager entityManager;
 
     public UserDAO(EntityManager entityManager) {
@@ -18,4 +18,8 @@ public class UserDAO {
         this.entityManager.persist(user);
         transaction.commit();
     }
+
+    public void update(User user) {}
+
+    public void delete(User user) {}
 }
