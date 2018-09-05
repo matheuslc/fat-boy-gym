@@ -57,7 +57,7 @@ public class RegisterEmployeeFrame extends javax.swing.JFrame {
 
         birthTextField.setText("Data Nascimento");
 
-        addressTextField.setText("Endereço");
+        addressTextField.setText("Endereï¿½o");
 
         phoneTextField.setText("Telefone");
 
@@ -67,7 +67,7 @@ public class RegisterEmployeeFrame extends javax.swing.JFrame {
 
         backButton.setText("Voltar");
 
-        functionTextField.setText("Função");
+        functionTextField.setText("Funï¿½ï¿½o");
         functionTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 functionTextFieldActionPerformed(evt);
@@ -81,7 +81,7 @@ public class RegisterEmployeeFrame extends javax.swing.JFrame {
             }
         });
 
-        paymentTextField.setText("Salário");
+        paymentTextField.setText("Salï¿½rio");
 
         passwordPasswordField.setText("password");
         passwordPasswordField.addActionListener(new java.awt.event.ActionListener() {
@@ -199,11 +199,7 @@ public class RegisterEmployeeFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new RegisterEmployeeFrame().setVisible(true);
-            }
-        });
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
