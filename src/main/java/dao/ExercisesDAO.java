@@ -5,7 +5,7 @@ import model.Exercises;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-public class ExercisesDAO {
+public class ExercisesDAO implements DAOInterface<Exercises> {
     private EntityManager entityManager;
 
     public ExercisesDAO(EntityManager entityManager) {
