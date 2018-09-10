@@ -8,31 +8,22 @@ import model.User;
 import view.RegisterEmployeeFrame;
 
 import javax.persistence.EntityManager;
+import view.LoginFrame;
 
 public class Main {
     public static void main (String args[])
     {
-        EntityManager entityManager = Connection.entityManager();
+//        EntityManager manager = Connection.entityManager();
+//        EmployeeDAO dao = new EmployeeDAO(manager);
+//        Employee employee = new Employee();
+//        
+//        employee.setName("Carmel");
+//        employee.setUserName("carmel25");
+//        employee.setPassword("carmel25");
+//        
+//        dao.save(employee);
 
-        UserDAO userDAO = new UserDAO(entityManager);
-        EmployeeDAO employeeDAO = new EmployeeDAO(entityManager);
-
-        UserController userController = new UserController(userDAO);
-        final EmployeeController employeeController = new EmployeeController(employeeDAO);
-
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                RegisterEmployeeFrame frame = new RegisterEmployeeFrame();
-                frame.setVisible(true);
-
-                Employee employee = new Employee();
-
-                employee.setName("Carmel");
-
-                employeeController.createEmployee(employee);
-            }
-        });
-
-        System.out.printf("Fala tu");
+        LoginFrame frame = new LoginFrame();
+        frame.setVisible(true);        
     }
 }
