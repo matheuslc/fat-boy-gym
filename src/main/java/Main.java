@@ -23,7 +23,8 @@ public class Main {
 //        
 //        dao.save(employee);
 
-        LoginFrame frame = new LoginFrame();
-        frame.setVisible(true);        
+        RegisterEmployeeFrame frame = new RegisterEmployeeFrame();
+        
+        frame.setVisible(true);
     }
 }
