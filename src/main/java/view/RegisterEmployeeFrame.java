@@ -5,6 +5,12 @@
  */
 package view;
 
+import controller.EmployeeController;
+import dao.Connection;
+import dao.EmployeeDAO;
+import javax.persistence.EntityManager;
+import model.Employee;
+
 /**
  *
  * @author Heithor
@@ -68,6 +74,11 @@ public class RegisterEmployeeFrame extends javax.swing.JFrame {
         });
 
         registerButton.setText("Cadastrar");
+        registerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerButtonActionPerformed(evt);
+            }
+        });
 
         backButton.setText("Voltar");
 
@@ -143,9 +154,7 @@ public class RegisterEmployeeFrame extends javax.swing.JFrame {
                                     .addComponent(addressTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(emailTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(phoneTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -242,6 +251,26 @@ public class RegisterEmployeeFrame extends javax.swing.JFrame {
     private void birthTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_birthTextFieldActionPerformed
+
+    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
+        EntityManager entityManager = Connection.entityManager();
+        EmployeeDAO dao = new EmployeeDAO(entityManager);
+        EmployeeController controller = new EmployeeController(dao);
+        
+        Employee employee = new Employee();
+        
+        employee.setAddress(addressTextField.getText());
+        employee.setPassword(passwordPasswordField.getText());
+        employee.setUserName(usernameTextField.getText());
+        employee.setName(nameTextField.getText());
+        employee.setCpf(cpfTextField.getText());
+        employee.setEmail(emailTextField.getText());
+        employee.setAddress(addressTextField.getText());
+        employee.setSalary(Float.parseFloat(paymentTextField.getText()));
+        employee.setRole(functionTextField.getText());
+        
+        controller.createEmployee(employee);
+    }//GEN-LAST:event_registerButtonActionPerformed
 
     /**
      * @param args the command line arguments

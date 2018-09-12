@@ -33,6 +33,14 @@ public class Employee {
 
     @Column(unique = true)
     private String userName;
+    
+    @Column(unique = true)
+    private String email;
+    
+    private float salary;
+    
+    @Column
+    private String role;
 
     public String getCpf() {
         return cpf;
@@ -56,6 +64,30 @@ public class Employee {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public String getEmail() {
+        return this.email;
+    }
+    
+    public void setSalary(float salary) {
+        this.salary = salary;
+    }
+    
+    public float getSalary() {
+        return this.salary;
+    }
+    
+    public void setRole(String role) {
+        this.role = role;
+    }
+    
+    public String getRole() {
+        return this.role;
     }
 
     public void setAddress(String address) {
