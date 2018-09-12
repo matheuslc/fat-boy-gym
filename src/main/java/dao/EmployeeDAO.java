@@ -1,5 +1,6 @@
 package dao;
 
+import java.util.List;
 import model.Employee;
 
 import javax.persistence.EntityManager;
@@ -20,6 +21,12 @@ public class EmployeeDAO implements DAOInterface<Employee> {
         transaction.begin();
         this.entityManager.persist(employee);
         transaction.commit();
+    }
+    
+    public List<Employee> all() {
+        Query query = this.entityManager.createQuery("* FROM Employee");
+        
+        return query.getResultList();
     }
 
     public void update(Employee employee) {}

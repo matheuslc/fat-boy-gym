@@ -16,7 +16,7 @@ public class Employee {
     @Column
     private String rg;
 
-    @Column
+    @Column(unique = true)
     private String cpf;
 
     @Temporal(TemporalType.DATE)
@@ -31,7 +31,7 @@ public class Employee {
     @Column
     private String password;
 
-    @Column
+    @Column(unique = true)
     private String userName;
 
     public String getCpf() {

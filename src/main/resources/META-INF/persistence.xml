@@ -1,36 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<persistence version="1.0"
-             xmlns="http://java.sun.com/xml/ns/persistence">
-    <persistence-unit name="fat_boy_gym">
-        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-
-        <class>model.User</class>
-
-        <properties>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
-
-            <!-- create / create-drop / update -->
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
-
-            <!-- Define quando mostrar no log as consultas SQL geradas -->
-            <property name="hibernate.show_sql" value="false"/>
-
-            <!-- Formata o log das consultas SQL geradas -->
-            <property name="hibernate.format_sql" value="true"/>
-
-            <!-- Propriedades JPA -->
-            <!-- Nome completo da classe do driver de conexão -->
-            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-
-            <!-- Definição da localização do banco e o nome da base -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/fat_boy_gym"/>
-
-            <!-- Definição do usuário do banco de dados -->
-            <property name="javax.persistence.jdbc.user" value="fatboygym"/>
-
-            <!-- Definição da senha do usuário -->
-            <property name="javax.persistence.jdbc.password" value="jeanclaudevandamme"/>
-        </properties>
-    </persistence-unit>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="fat_boy_gym">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>model.User</class>
+    <class>model.Employee</class>
+    <class>model.Exercises</class>
+    <class>model.Training</class>
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+      <!-- create / create-drop / update -->
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <!-- Define quando mostrar no log as consultas SQL geradas -->
+      <property name="hibernate.show_sql" value="false"/>
+      <!-- Formata o log das consultas SQL geradas -->
+      <property name="hibernate.format_sql" value="true"/>
+      <!-- Propriedades JPA -->
+      <!-- Nome completo da classe do driver de conexão -->
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <!-- Definição da localização do banco e o nome da base -->
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/fat_boy_gym"/>
+      <!-- Definição do usuário do banco de dados -->
+      <property name="javax.persistence.jdbc.user" value="fatboygym"/>
+      <!-- Definição da senha do usuário -->
+      <property name="javax.persistence.jdbc.password" value="jeanclaudevandamme"/>
+    </properties>
+  </persistence-unit>
 </persistence>

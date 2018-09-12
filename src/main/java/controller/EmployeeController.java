@@ -3,7 +3,7 @@ package controller;
 import dao.EmployeeDAO;
 import model.Employee;
 
-public class EmployeeController {
+public class EmployeeController implements ControllerInterface {
     private EmployeeDAO employeeDAO;
 
     public EmployeeController(EmployeeDAO employeeDAO) {

@@ -4,7 +4,7 @@ import dao.EmployeeDAO;
 import model.Employee;
 import model.User;
 
-public class AuthController {
+public class AuthController implements ControllerInterface {
     private EmployeeDAO employeeDAO;
 
     public AuthController(EmployeeDAO employeeDAO) {

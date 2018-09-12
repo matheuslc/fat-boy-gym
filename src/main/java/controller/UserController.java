@@ -3,7 +3,7 @@ package controller;
 import dao.UserDAO;
 import model.User;
 
-public class UserController {
+public class UserController implements ControllerInterface {
     private UserDAO userDAO;
 
     public UserController(UserDAO userDAO) {

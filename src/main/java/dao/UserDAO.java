@@ -1,5 +1,6 @@
 package dao;
 
+import java.util.List;
 import model.User;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -24,4 +25,10 @@ public class UserDAO implements DAOInterface<User> {
     public void update(User user) {}
 
     public void delete(User user) {}
+    
+    public List<User> all() {
+        Query query = this.entityManager.createQuery("* FROM Users");
+
+        return query.getResultList();
+    }
 }

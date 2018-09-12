@@ -16,7 +16,7 @@ public class User {
     @Column
     private String rg;
 
-    @Column
+    @Column(unique = true)
     private String cpf;
 
     @Temporal(TemporalType.DATE)
